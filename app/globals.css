@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #5eead4; /* бирюзовый акцент */
+  --bg: #0a0b0f;
+  --surface: #14161c;
+  --ink: #f4f6f8;
+  --muted: #8b93a1;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html.light {
+  --accent: #0d9488;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #0e1013;
+  --muted: #5b6472;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  font-family: var(--font-display);
+  min-height: 100dvh;
+}
+
+/* убираем любые курсоры/hover-подсказки в режиме записи */
+.recording-mode,
+.recording-mode * {
+  cursor: none !important;
+}
+
+.digit-glow {
+  text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 55%, transparent),
+    0 0 48px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
