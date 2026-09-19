@@ -45,8 +45,10 @@ body {
 }
 
 .digit-glow {
-  text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 55%, transparent),
-    0 0 48px color-mix(in srgb, var(--accent) 25%, transparent);
+  color: #ffffff;
+  text-shadow:
+    0 0 18px rgba(94, 234, 212, 0.25),
+    0 0 48px rgba(94, 234, 212, 0.08);
 }
 
 ::selection {
